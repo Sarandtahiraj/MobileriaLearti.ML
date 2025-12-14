@@ -1,0 +1,500 @@
+/*
+ekzistojne tri menyre te implementimit te CSS:
+1.INLINE - vlen vetem per nje element te struktures HTML psh ne paragrafin p.
+2.INTERNAL - vlene vetem per filen e faqes qe deshiron me dizajnu psh index.html
+3.EXTERNAL - vlene ose mund te perdoret nga cilido file i html, psh stilin qe e shkrun ne style.css mund te perdoret per index.html, sherbimet.html etj pra per faqe tjera.
+
+Zakonisht ne fillim te filet te css, duhet te deklarohen disa informata te rendesishme perreth zhvillimit te ketij dizajni, psh kush eshte autori i ketij stili, mund te jete individ ose kompani, versioni i fundit ose perditesimi i tij pra data, kushtet e perdorimit dhe rregullat e tij etj.
+
+Autori: ARRA Academy,
+Versioni: 1.0/2.0
+Pershkrimi: Ky stil eshte i pergaditur per mobilerin learti...
+Rregullorja: ndalohet keqperdorimi i ketij kodi, lexo detajet ne adresen:
+Politikat: per tu paisur me te gjitha informatat lexo ne kete adrese:
+...
+
+* simboli i yllit eshte selektor/perzgjedhes i te gjitha etiketave/elementeve qe ekzistojne ne trupin e faqes pra ne body, i qaset atyre per ti japur veti te njejta.
+
+*/
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: Arial;
+    width: fit-content;
+}
+
+:root
+{
+    --bardhe: white;
+    --zi: #000000;
+    --primare: #ff891b;
+    --sekondare: #484848;
+    --gri: #ddd;
+    --grierret: #777777;
+}
+
+/* topheader ose koka e faqes - fillimi */
+
+nav
+{
+    background: var(--sekondare);
+    width: 100%;
+    height: 80px;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+label.logo
+{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px 0 100px;
+}
+
+nav ul
+{
+    color: black;
+    float: right;
+    margin-right: 20px;
+    padding: 0 200px;
+}
+
+nav ul li 
+{
+   color: white;
+    font-size: 17px;
+    margin: 0 5px;
+    line-height: 80px;
+    display: inline-block;
+}
+
+nav ul li a 
+{
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+a.aktiv,
+a:hover
+{
+    background: var(--grierret);
+    transition: 0.5s;
+}
+
+
+/* topheader ose koka e faqes - perfundimi */
+
+/* dizajni i heroit - fillimi */
+
+.hero
+{
+    background: url(library/hero.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container
+{
+    padding: 0 200px;
+}
+
+.title
+{
+    font-size: 120px;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 40px;
+    padding: 0 90px;
+    text-align: center;
+}
+
+.button-hero
+{
+    display: flex;
+    margin: auto;
+    padding: 15px 50px;
+    background-color: var(--gri);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.button-hero:hover
+{
+    background-color: var(--primare);
+    transition: 0.5s;
+    color: white;
+}
+
+/* dizajni i heroit - perfundimi */
+
+/* dizajni i sherbimeve - fillimi */
+
+.services
+{
+    display: flex;
+    justify-content: center;
+    margin-right: 50px 0;
+}
+
+.services h1
+{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 40px;
+}
+
+.cards
+{
+    display: flex;
+    width: 100%;
+}
+
+.card
+{
+    padding: 50px 100px;
+    border: none;
+    margin: 0 20px;
+    text-align: center;
+    width: 70%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7), 0 5px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.front
+{
+    backface-visibility: hidden;
+}
+
+.back
+{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    top: 140px;
+    left: 10px;
+    right: 10px;
+}
+
+.back p
+{
+    font-size: 18px;
+    color: var(--primare);
+}
+
+.card h2
+{
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--primare);
+    padding-top: 25px;
+}
+
+.card.flip
+{
+    transform: rotateX(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+
+/* dizajni i sherbimeve - perfundimi */
+
+
+/* dizajni i kategorive - fillimi */
+
+.category
+{
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.category h1
+{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter
+{
+    display: flex;
+    justify-content: center;
+}
+
+.button
+{
+    padding: 10px 50px;
+    background-color: var(--primare);
+    border: none;
+    border-radius: 10px;
+    margin: 10px 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.category-images
+{
+    display: flex;
+    margin-top: 30px;
+}
+
+.category-images img
+{
+    max-width: 400px;
+    margin: 0 20px;
+    aspect-ratio: 3/2;
+}
+
+.content
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-size: cover;
+}
+
+#images
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 50px));
+    column-gap: 195px;
+    grid-row-gap: 7px;
+    margin: 18px 100px;
+    margin-bottom: 50px;
+}
+
+/* dizajni i kategorive - perfundimi */
+
+
+/* dizajni i informatave - fillimi */
+
+.projects
+{
+    background-color: var(--primare);
+    width: 100%;
+    height: 200px;
+    margin: 70px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-details
+{
+    display: flex;
+    align-items: center;
+}
+
+.projects-details h1
+{
+    margin: 40px;
+}
+
+.button-project
+{
+    padding: 20px 60px;
+    background-color: var(--grierret);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-project:hover
+{
+    background-color: var(--sekondare);
+    transition: 0.5s;
+}
+
+/* dizajni i informatave - perfundimi */
+
+/* dizajni i cmimores - fillimi */
+
+.dimension-calculation
+{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.dimension-calculation h1
+{
+    font-size: 40px;
+    text-align: center;
+}
+
+.calculator
+{
+    display: inline-grid;
+}
+
+.calculator label
+{
+    font-size: 23px;
+    padding: 10px 0;
+}
+
+.calculator input
+{
+    font-size: 22px;
+    padding: 10px;
+    border: 2px solid var(--primare);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.calculator p
+{
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* dizajni i cmimores - perfundimi */
+
+
+/* dizajni i rrethnesh - fillimi */
+
+.about-us
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--gri);
+    padding: 35px 0;
+}
+
+.about-us h1
+{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+.about-us-content
+{
+    display: flex;
+}
+
+.about-us-content img
+{
+    max-width: 700px;
+    padding: 0 40px;
+}
+
+.about-us-content p
+{
+    font-size: 18px;
+}
+
+/* dizajni i rrethnesh - perfundimi */
+
+
+/* dizajni i kontaktit - fillimi */
+
+.contact
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding: 40px 0;
+}
+
+.contact h1
+{
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+.contact-form
+{
+    font-size: 18px;
+    display: grid;
+}
+
+.contact-form label
+{
+    font-size: 18px;
+    display: flex;
+    padding: 10px;
+}
+
+.contact-form input
+{
+    width: 600px;
+    height: 50px;
+    padding: 20px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7), 0 5px 20px 0 rgba(0, 0, 0, 0.7);
+    font-size: 17px;
+    color: var(--primare);
+    font-weight: 700;
+    margin: 10px;
+    border: 2px solid var(--primare);
+    border-radius: 20px;
+}
+
+.contact textarea
+{
+    border: 2px solid var(--primare);
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primare);
+    padding: 20px;
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.7), 0 5px 20px 0 rgba(0, 0, 0, 0.7);
+    resize: none;
+}
+
+#send-button
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--primare);
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+#send-button:hover
+{
+    background-color: greenyellow;
+    cursor: pointer;
+    border: none;
+}
+
+.footer
+{
+    background-color: var(--primare);
+    text-align: center;
+    padding: 70px;
+}
+/* dizajni i kontaktit - fillimi */
+

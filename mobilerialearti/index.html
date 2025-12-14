@@ -1,0 +1,233 @@
+<!DOCTYPE html> <!-- doctypehtml e definon dokumentin per ta lexuar dhe ekzekutuar browseri ose shfletuesi ashtu sic e kemi koduar. -->
+
+<html lang="sq">
+
+<head>
+    <title>Mobileria Learti - Lider ne cilesi...</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* ketu mund te shkruhet stilizimi INTERNAL dhe vlene vetem per kete file pra per index.html */
+    </style>
+</head>
+
+<body>
+
+    <!-- struktura e shiritit te navigimit -->
+    <nav>
+        <label class="logo">Mobileria Learti</label>
+        <ul>
+            <!-- ul/unordered list - list e padefinuar ose e panumeruar-->
+            <li><a class="aktiv" href="index.html">Ballina</a></li>
+            <li><a href="#projektet">Projektet</a></li>
+            <li><a href="#rrethnesh">Rreth Nesh</a></li>
+            <li><a href="#sherbimet">Sherbimet</a></li>
+            <li><a href="#kontakti">Kontakti</a></li>
+            <li><a href="login.php">Porosit</a></li>
+        </ul>
+    </nav>
+
+    <!-- struktura e heroit ose pjesa kryesore e faqes -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-elements">
+                <h1 class="title" id="titulli-ri">Ne ju garantojme per kualitet te larte!</h1>
+                <button class="button-hero" onclick="ndryshotitullin()">Me shume...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- struktura e sherbimeve -->
+    <div class="services" id="sherbimet">
+        <div class="container">
+            <h1>Sherbimet</h1>
+
+            <!-- klasa e cila i grumbullon/mban te gjitha kartat -->
+            <div class="cards">
+
+                <!-- klasa e cila e krijon nje kart te vetme me materialin perkates -->
+                <div class="card">
+                    <div class="front">
+                        <img src="library/kuzhina.png" alt="ikona e kuzhines">
+                        <h2>Kuzhina</h2>
+                    </div>
+                    <div class="back">
+                        <p>Kuzhina eshte zemra e shtepise, bejeni te cmuar!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front">
+                        <img src="library/dhomagjumi.png" alt="ikona e dhomes">
+                        <h2>Dhoma Gjumi</h2>
+                    </div>
+                    <div class="back">
+                        <p>Dhoma e gjumit eshte vendi ku trupi gjene qetesi dhe rehati!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="front">
+                        <img src="library/komodina.png" alt="ikona e komodines">
+                        <h2>Komodina</h2>
+                    </div>
+                    <div class="back">
+                        <p>Komodinat zbukurojne ambientin e shtepise suaj!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="front">
+                        <img src="library/ndryshme.png" alt="ikona e tjera">
+                        <h2>Te tjera</h2>
+                    </div>
+                    <div class="back">
+                        <p>Ju na jepni idene ne e kthejme ne produkt modern dhe kreativ!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="category">
+        <div class="container">
+            <div class="category-elements">
+            
+                <h1>Kategorite</h1>
+                
+                <div class="filter">
+                    <a href="#" class="button active" data-filter="tegjitha">Te gjitha</a>
+                    <a href="#" class="button" data-filter="kuzhina">Kuzhina</a>
+                    <a href="#" class="button" data-filter="dhomagjumi">Dhoma Gjumi</a>
+                    <a href="#" class="button" data-filter="komoda">Komodina</a>
+                </div>
+                
+                <div class="category-images">
+                    <section class="content" id="images">
+                        
+                        <!-- fotografite e kuzhinave -->
+                        <div class="image kuzhina">
+                            <img src="library/kuzhina1.jpg">
+                        </div>
+                        <div class="image kuzhina">
+                            <img src="library/kuzhina2.jpg">
+                        </div>
+                        <div class="image kuzhina">
+                            <img src="library/kuzhina3.jpg">
+                        </div>
+                        
+                        <!-- fotografite e dhomave -->
+                        <div class="image dhomagjumi">
+                            <img src="library/dhomagjumi1.jpg">
+                        </div>
+                        <div class="image dhomagjumi">
+                            <img src="library/dhomagjumi2.jpg">
+                        </div>
+                        <div class="image dhomagjumi">
+                            <img src="library/dhomagjumi3.jpg">
+                        </div>
+                        
+                        <!-- fotografite e komodave -->
+                        <div class="image komoda">
+                            <img src="library/komodina1.jpg">
+                        </div>
+                        <div class="image komoda">
+                            <img src="library/komodina2.jpg">
+                        </div>
+                        <div class="image komoda">
+                            <img src="library/komoda3.jpg">
+                        </div>
+                        
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- struktura e informatave -->
+    <div class="projects">
+        <div class="projects-details">
+            <h1 style="display: none" id="shfaqe">Mobileria Learti ka realizuar me sukses mbi 100 punime ne mbare Kosoven!</h1>
+            <button class="button-project" type="button" onclick="shfaqinfot()" id="butoni">Shfaq informatat e projektimeve</button>
+        </div>
+    </div>
+    
+    <!-- struktura e cmimores -->
+    <div class="dimension-calculation">
+        <div class="container">
+            <div class="calculator">
+                
+                <h1>Cmimorja</h1>
+                <p>Ju mund te kalkuloni cmimin per meter te kuzhines duke u bazuar ne modelin e meposhtem:</p>
+                
+                <img src="library/icona-kuzhines.png">
+                
+                <!-- fushat inpute te cilat grumbullojne te dhena -->
+                <label for="meter">Shtyp metrat:</label>
+                <input type="number" name="meter" id="input1">
+                
+                <label for="result">Cmimi per meter(€)</label>
+                <input type="number" name="result" id="input2">
+            </div>
+        </div>
+    </div>
+    
+    <!-- struktura e informatave -->
+    <div class="about-us" id="rrethnesh">
+        <div class="container">
+            
+            <h1>Kush jemi ne?!</h1>
+            
+            <div class="about-us-content">
+                <img src="library/about-us.jpg" id="foto-nje" onmouseout="mousijasht()" onmouseover="mousimbi()">
+                <img src="library/transport.jpg" style="display: none" id="foto-dy" onmouseover="mousimbi()" onmouseout="mousijasht()">
+                
+                <p>
+                    Mobileria LEARTI eshte themeluar ne vitin 2015, gjate gjithe ketyre viteve jemi kujdesur te prodhojme modelet e mobiljeve me eksluzive me stil dhe elengance.<br>
+                    Mobileria LEARTI eshte njera nder prodhuesit me te suksesshem ne vendin tone. Specialiteti i kesaj mobilerie eshte prodhimi i kuzhinave moderne te paisura me elemente te teknikes se bardhe dhe poashtu me mundesi te dizajnimit klasik dhe modern.<br>
+                    Ne prezantojme koleksion te gjere te mobiljeve duke perfshire si: kuzhina me stil dhe dizajne bashkekohore, dollape me dyer dhe mekanizma levizes, mobilje te dhomave te dites, te dhomave te gjumit, dhoma per femije, tavolina per TV, te bukes, karrige, tavolina per kompjuter etj...<br>
+                    Per faktin se kemi nje eksperience shumevjecare si dhe me ekspoziten me te madhe prej 1500m2 ne fushen e mobilimit te ambienteve te brendshme, vazhdon te ofron nje game te gjere
+                    produktesh ku nderthurja e detajve, percakton funksionalitetin si dhe nje menyre qe percakton stilin e jeteses.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- struktura e kontaktit -->
+    <div class="contact" id="kontakti">
+        <div class="container">
+        
+            <h1>Kontakti</h1>
+            
+            <div class="contact-form">
+                <form name="myform">
+                    
+                    <label for="emri">Emri dhe Mbiemri:</label>
+                    <input type="text" name="emri" id="inputEmri" > <br>
+                    
+                    <label for="email">Adresa Elektronike: </label>
+                    <input type="email" name="email" id="inputEmail"> <br>
+                    
+                    <label for="pershkrimi">Pershkrimi:</label>
+                    <textarea name="pershkrimi" rows="10" id="inputPershkrimi"></textarea> <br>
+                    
+                    <input type="button" value="Dergo" id="send-button">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- struktura e fundit e faqes -->
+    <div class="footer">
+        <h4>Te gjitha te drejtat e rezervuara nga Mobileria Learti | Mundesoi: ARRA Academy</h4>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
+
